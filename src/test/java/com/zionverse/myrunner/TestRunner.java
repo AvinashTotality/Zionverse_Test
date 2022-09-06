@@ -8,12 +8,13 @@ import io.cucumber.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "/Users/avinash/eclipse-workspace/Project_Zionverse/Features",tags="@Sanity",
+		features = {"Features"},
 		glue = {"com.zionverse.stepDefinitions"},
 		monochrome = true,
+		dryRun = true,
 		plugin = {"pretty",
-//				"html:target/reports/cucumber.html",
-//				"com.cucumber.listener.ExtentCucumberFormatter:output/report.html"
+				"html:target/reports/cucumber.html",
+				"com.cucumber.listener.ExtentCucumberFormatter:target/ExtentReport.html"
 				}
 				
 		)
