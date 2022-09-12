@@ -13,8 +13,10 @@ import io.cucumber.junit.Cucumber;
 		monochrome = true,
 		dryRun = true,
 		plugin = {"pretty",
-				"html:target/reports/cucumber.html",
-				"com.cucumber.listener.ExtentCucumberFormatter:target/ExtentReport.html"
+				"json:target/Cucumber.json"
+//				"html:target/cucumber-reports"
+//				"html:target/reports/cucumber.html",
+//				"com.cucumber.listener.ExtentCucumberFormatter:target/ExtentReport.html"
 				}
 				
 		)

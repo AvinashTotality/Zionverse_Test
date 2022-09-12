@@ -37,6 +37,11 @@ public class LoginStepDefinition extends BasePage {
 		System.out.println("Step-11");
 		loginpage.click_On_Login();
 	}
+	
+	@When("Enter valid two authenticator code")
+	public void enter_valid_two_authenticator_code() {
+	    loginpage.enter_Two_Authentication_Code();
+	}
 
 	@Then("Verify user login successfully")
 	public void verify_user_login_successfully() throws InterruptedException {

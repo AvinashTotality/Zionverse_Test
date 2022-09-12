@@ -4,6 +4,7 @@ import com.zionverse.base.BasePage;
 import com.zionverse.pageObjects.CompleteKYCPage;
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class CompleteKYCStepDefinition {
@@ -51,6 +52,13 @@ public class CompleteKYCStepDefinition {
 		completekyc.select_PanCard_Option();
 		completekyc.click_On_Proceed_Button();
 	}
+	
+	@And("Click on the aadhaar button and proceed button")
+	public void click_on_the_aadhaar_button_and_proceed_button() {
+
+		completekyc.select_AadhaarCard_Option();
+		completekyc.click_On_Proceed_Button();
+	}
 
 	@And("Click on the upload id button")
 	public void click_on_the_upload_id_button() {
@@ -62,5 +70,10 @@ public class CompleteKYCStepDefinition {
 	@And("Click on the upload link and select document")
 	public void click_on_the_upload_link_and_select_document() {
 		completekyc.click_On_Upload_And_Select_Documents();
+	}
+	
+	@Then("Verify kyc completed successfully")
+	public void verify_kyc_completed_successfully() {
+	    completekyc.verify_KYC_Completed_Successfully();
 	}
 }
